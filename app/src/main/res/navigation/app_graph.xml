@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_graph"
+    app:startDestination="@id/appStartFragment">
+
+    <fragment
+        android:id="@+id/appStartFragment"
+        android:name="ru.ar2code.multimodulenavexample.AppStartFragment"
+        android:label="app_start_fragment"
+        tools:layout="@layout/app_start_fragment" />
+
+    <include app:graph="@navigation/feature_a_nav_graph" />
+
+    <include app:graph="@navigation/feature_b_nav_graph" />
+
+    <action
+        android:id="@+id/homeDestination"
+        app:popUpTo="@id/appStartFragment" />
+</navigation>

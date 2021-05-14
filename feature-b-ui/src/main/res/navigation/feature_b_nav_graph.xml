@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feature_b_nav_graph"
+    app:startDestination="@id/featureBStartFragment">
+
+    <fragment
+        android:id="@+id/featureBStartFragment"
+        android:name="ru.ar2code.feature_b_ui.FeatureBStartFragment"
+        android:label="feature_b_start_fragment"
+        tools:layout="@layout/feature_b_start_fragment" >
+        <action
+            android:id="@+id/action_featureBStartFragment_to_featureBEndFragment"
+            app:destination="@id/featureBEndFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/finishFeatureB"
+        app:popUpTo="@id/feature_b_nav_graph"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/featureBEndFragment"
+        android:name="ru.ar2code.feature_b_ui.FeatureBEndFragment"
+        android:label="feature_b_end_fragment"
+        tools:layout="@layout/feature_b_end_fragment" />
+</navigation>

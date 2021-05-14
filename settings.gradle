@@ -1,0 +1,11 @@
+include ':feature-b-api'
+include ':feature-b-ui'
+include ':feature-b-impl'
+include ':feature-a-impl-2'
+include ':feature-a-impl'
+include ':feature-a-ui'
+include ':feature-a-api'
+include ':navigation-impl'
+include ':navigation-api'
+include ':app'
+rootProject.name = "Multi Module Nav Example"
